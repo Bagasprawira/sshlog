@@ -11,11 +11,15 @@ Assumption:
 
 * AlphaServer and AlphaClient is running CentOs 7
 * Hostname on AlphaClient nodeABC and nodeXYZ
-* Ansible (version 2.9.9-1.el7.noarch)
+* Automate config to cronjob using Ansible (version 2.9.9-1.el7.noarch) from AlphaServer
 * Ansible inventory file, manually insert in /etc/ansible/hosts
 * User for all node: root
 * Password for all node: P@ssw0rd
+* You shoud change ip_alphaserver in client.sh
 
 Usage:
 
+* Store client.sh, server.sh, and cronsshlog.yml into AlphaServer
+
+ansible-playbook cronsshlog.yml
 ansible-playbook cronsshlog.yml
