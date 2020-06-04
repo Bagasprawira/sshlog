@@ -22,4 +22,3 @@ Usage:
 * Store client.sh, server.sh, and cronsshlog.yml into AlphaServer
 
 ansible-playbook cronsshlog.yml
-ansible-playbook cronsshlog.yml
