@@ -1,0 +1,46 @@
+---
+- name: Installing dependency
+  hosts: all
+  remote_user: root
+  tasks:
+
+  - name: install sshpass
+    yum:
+      name: sshpass
+      state: latest
+
+- name: "AlphaClient setting cronjob"
+  hosts: alphaclient
+  remote_user: root
+  tasks:
+
+  - name: copy sshlog
+    copy:
+      src: /home/client.sh
+      dest: /home/client.sh
+      mode: +x
+
+  - name: Create job
+    cron:
+      name: "a job for client"
+      minute: "*"
+      user: root
+      job: "/home/client.sh | wall"
+
+- name: "AlphaServer setting cronjob"
+  hosts: alphaserver
+  remote_user: root
+  tasks:
+
+  - name: copy sshlog
+    copy:
+      src: /home/server.sh
+      dest: /home/server.sh
+      mode: +x
+
+  - name: Create job
+    cron:
+      name: "a job for server"
+      minute: "*"
+      user: root
+      job: "/home/server.sh | wall"
