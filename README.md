@@ -3,9 +3,9 @@ Number of ssh log-in attempts
 
 Objective:
 
-AlphaServer : can show all the metrices ssh log-in attempt from AlphaClients
-AlphaClient : can report the metrics of number from ssh log-in attempts to AlphaServer
-Script will be run in cronjob every minute, configured using Ansible 
+* AlphaServer : can show all the metrices ssh log-in attempt from AlphaClients
+* AlphaClient : can report the metrics of number from ssh log-in attempts to AlphaServer
+* Script will be run in cronjob every minute, configured using Ansible 
 
 Assumption:
 
