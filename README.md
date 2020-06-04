@@ -10,6 +10,7 @@ Objective:
 Assumption:
 
 * AlphaServer and AlphaClient is running CentOs 7
+* Hostname on AlphaClient nodeABC and nodeXYZ
 * Ansible (version 2.9.9-1.el7.noarch)
 * Ansible inventory file, manually insert in /etc/ansible/hosts
 * User for all node: root
